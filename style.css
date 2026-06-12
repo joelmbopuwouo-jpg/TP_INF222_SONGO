@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    background: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#board {
+    background-color: #8B5A2B; /* Couleur bois du tablier */
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.camp {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Inverser le camp Nord visuellement si nécessaire, ou gérer l'affichage direct */
+.pit {
+    width: 60px;
+    height: 60px;
+    background-color: #4A2E1B;
+    border-radius: 50%; /* Cases circulaires exigées */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.pit:hover {
+    transform: scale(1.08);
+    background-color: #5c3a21;
+}
+
+.seeds {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#status-bar {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* S'assurer que le parent est le repere */
+.pit {
+    position: relative;
+}
+
+/* Style general de l'etiquette */
+.pit-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f1c40f; /* un jaune dore qui va bien avec les bois */
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none; /* Empeche le text de bloquer les clics sur case */
+}
+
+/* Positionner les numeros Sud en Dessous de la case */
+.south-label {
+    bottom: -25px;
+}
+
+/* Positionner les numeros Nord AU_DESSUS de la case */
+.north_label {
+    top: -25px;
+}
