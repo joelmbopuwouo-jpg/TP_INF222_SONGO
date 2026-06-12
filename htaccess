@@ -1,0 +1,3 @@
+<IfModule mod_mine.c>
+  AddType application/javascript .js
+</IfModule>
